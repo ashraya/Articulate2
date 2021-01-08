@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/client/js/screen.js"></script>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+    <link rel = "stylesheet" href="/client/css/screen.css">
+    <script>checkAuthentication()</script>
+</head>
+<body>
+<div id="topnav" class="topnav">
+    <div class="logo">
+        <img src="/client/img/expressLogo.jpg" alt="Express Logo">
+    </div>
+    <a id="topnavHome" href="/client/Screen/home.html">Home</a>
+    <a id="topnavGame" href="/client/Screen/board.html?gameLevel=original">Game</a>
+    <a class="active" id="topnavAdmin"  href="/client/Admin/admin.html">Admin</a>
+    <a id="topnavHelp"  href="/client/Screen/help.html">Help</a>
+</div>
+<div class="xRow">
+    <div class="column mainColumn" >
+        <h2>Admin Options</h2>
+        <section>
+            <a class="primaryOption" href="/client/Admin/changepass.html">
+                <h2>Change Password</h2>
+                <p>Change the Admin Password when you know the current Password</p>
+            </a>
+        </section>
+        <section>
+            <a class="primaryOption" href="/client/Admin/editwords.html?gameLevel=original">
+                <h2>Add Words to the Original version of the game</h2>
+                <p>Use this link to edit current words or add words one record at a time</p>
+            </a>
+        </section>
+        <section>
+            <a class="primaryOption" href="/client/Admin/editwords.html?gameLevel=kids">
+                <h2>Add Words to the Kids version of the game</h2>
+                <p>Use this link to edit current words or add words one record at a time</p>
+            </a>
+        </section>
+    </div>
+    <div class="column sideColumn">
+        <h1>Help</h1>
+        <section class="sideSection">
+            <a href="">Rules for Original Version</a>
+        </section>
+        <section class="sideSection">
+            <a href="">Rules for Kids Version</a>
+        </section>
+    </div>
+</div>
+
+</body>
+</html>

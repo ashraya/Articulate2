@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Express Game Card</title>
+    <script src="/client/js/mobile.js"></script>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href="/client/css/mobile.css">
+</head>
+<body onpageshow="pageLoad()">
+<div class="row">
+    <button onclick="goHome()">Home</button>
+    <button onclick="goHelp()">Help</button>
+</div>
+<div class="sideBox lBox">
+    <div class="cardItem">
+        <span>Category</span>
+        <div id="sdCategory">&nbsp;</div>
+    </div>
+    <div class="cardItem">
+        <span>Express this Word!</span>
+        <div id="sdWord">&nbsp;</div>
+    </div>
+    <div id="toolbar">
+        <button class="btnWide" id="nextWord" onclick="nextWord()">Next Word</button>
+        <button class="btnWide" id="skipWord" onclick="skipWord()">Skip Word</button>
+    </div>
+</div>
+<div class="sideBox cBox">
+    <div id="timerWrap">
+        60
+    </div>
+    <div id="toolbar2" class="sdWord">
+        <button id="btnPlay" class="btnPlay" onClick="goPlay()">Play</button>
+        <button id="btnPause" class="btnPause" onClick="goPause()">Pause</button>
+    </div>
+</div>
+<div class="sideBox cBox">
+    <div>Team Playing is <br><span id="teamName"></span></div>
+    <button class="btnWide" id="btnStart" onClick="goPlay()">Start</button>
+</div>
+<div id="msgBox" class="messageBox">
+    Game has Completed!
+</div>
+</body>
+</html>

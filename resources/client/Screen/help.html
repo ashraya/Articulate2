@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/client/js/screen.js"></script>
+    <meta charset="UTF-8">
+    <title>Help Page</title>
+    <link rel = "stylesheet" href="/client/css/screen.css">
+</head>
+
+
+<body>
+<div id="topnav" class="topnav">
+    <div class="logo">
+        <img src="/client/img/expressLogo.jpg" alt="Express Logo">
+    </div>
+    <a id="topnavHome" href="/client/Screen/home.html">Home</a>
+    <a id="topnavGame" href="/client/Screen/board.html?gameLevel=original">Game</a>
+    <a id="topnavAdmin"  href="/client/Admin/admin.html">Admin</a>
+    <a class="active" id="topnavHelp"  href="/client/Screen/help.html">Help</a>
+</div>
+
+<div class="row">
+
+    <div class="column mainColumn">
+        <h1>Help Page</h1>
+        <section>
+            <h2>Game Improvements</h2>
+            <p>Fill in the form below to makes us aware of any improvements you would like: </p>
+            <form name="improveForm" id="improveForm" action="/admin/helpForm" method="post" enctype="multipart/form-data" onsubmit="return frmSubmit(event, helpSuccessWrapper)">
+                <label for="errorType">Improvement:</label><br>
+                <textarea id="errorType" name="errorType" rows="3" cols="80"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+
+            <h2>Game Errors</h2>
+            <p>Fill in the form below to makes us aware of any errors that need to be fixed: </p>
+            <form name="errorForm" id="errorForm" action="/admin/helpForm" method="post" enctype="multipart/form-data" onsubmit="return frmSubmit(event, helpSuccessWrapper)">
+                <label for="pgName">Page of Error:</label><br>
+                <input type="text" id="pgName" name="pgName"><br>
+                <label for="gameLevel">Select Game Level: </label><br>
+                <select name="gameLevel" id="gameLevel">
+                    <option value="original">Original</option>
+                    <option value="kids">Kids</option>
+                </select>
+                <label for="errorType">Error Description:</label><br>
+                <textarea  id="errorType" name="errorType" rows="3" cols="80"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+
+        </section>
+    </div>
+
+    <div class="column sideColumn">
+        <h1>Other Help</h1>
+        <section class="sideSection">
+            <a href="/client/Screen/oRules.html">Rules for Original Version</a>
+        </section>
+        <section class="sideSection">
+            <a href="/client/Screen/kRules.html">Rules for Kids Version</a>
+        </section>
+    </div>
+</div>
+
+</body>
+</html>

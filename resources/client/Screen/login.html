@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/client/js/screen.js"></script>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel = "stylesheet" href="/client/css/screen.css">
+</head>
+
+
+<body>
+<div id="topnav" class="topnav">
+    <div class="logo">
+        <img src="/client/img/expressLogo.jpg" alt="Express Logo">
+    </div>
+    <a class="active" id="topnavHome" href="/client/Screen/home.html">Home</a>
+    <a id="topnavGame" href="/client/Screen/board.html?gameLevel=original">Game</a>
+    <a id="topnavAdmin"  href="/client/Admin/admin.html">Admin</a>
+    <a id="topnavHelp"  href="/client/Screen/help.html">Help</a>
+</div>
+
+<div class="xRow">
+    <div class="column mainColumn" >
+        <h1>Login</h1>
+        <section>
+            <h3>Login is only required for admin functions.  Game can be played without logging in</h3>
+            <form action="/admin/login" method="POST" enctype="multipart/form-data" onsubmit="return frmSubmit(event, loginSuccessWrapper)">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="username">
+                <label for="curPass">Password</label>
+                <input id="curPass" name="curPass" type="password">
+                <input type="submit">
+            </form>
+        </section>
+
+    </div>
+    <div class="column sideColumn">
+        <h1>Other Help</h1>
+        <section class="sideSection">
+            <a href="/client/Screen/oRules.html">Rules for Original Version</a>
+        </section>
+        <section class="sideSection">
+            <a href="/client/Screen/kRules.html">Rules for Kids Version</a>
+        </section>
+    </div>
+</div>
+
+</body>
+</html>

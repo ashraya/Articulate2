@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/client/js/screen.js"></script>
+    <meta charset="UTF-8">
+    <title>Edit Content</title>
+    <link rel = "stylesheet" href="/client/css/screen.css">
+</head>
+<body onpageshow="checkAuthentication()">
+<div id="topnav" class="topnav">
+    <div class="logo">
+        <img src="/client/img/expressLogo.jpg" alt="Express Logo">
+    </div>
+    <a id="topnavHome" href="/client/Screen/home.html">Home</a>
+    <a id="topnavGame" href="/client/Screen/board.html?gameLevel=original">Game</a>
+    <a class="active" id="topnavAdmin"  href="/client/Admin/admin.html">Admin</a>
+    <a id="topnavHelp"  href="/client/Screen/help.html">Help</a>
+</div>
+<div class="xRow">
+    <div class="column mainColumn" >
+        <h2>List of Words in the Database</h2>
+        <section>
+            <table id="WordList" class="WordList">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Person</th>
+                    <th>Object</th>
+                    <th>Random</th>
+                    <th>Nature</th>
+                    <th>World</th>
+                    <th>Action</th>
+                    <th>Spade</th>
+                    <th>Edit</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <br><br>
+            <button onclick="setNew()">New Record</button>
+            <script>populateAdminTable()</script>
+        </section>
+        <section>
+            <br>
+            <h3>Add / Edit Cards</h3>
+            <form id="editForm" action="/admin/put/wordRecord" method="POST" enctype="multipart/form-data" onsubmit="return frmSubmit(event, tableUpdateWrapper)">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td><label for="Person">Person</label><input id="Person" name="Person" type="text"></td>
+                        <td><label for="Object">Object</label><input id="Object" name="Object" type="text"></td>
+                        <td><label for="Random">Random</label><input id="Random" name="Random" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Nature">Nature</label><input id="Nature" name="Nature" type="text"></td>
+                        <td><label for="World">World</label><input id="World" name="World" type="text"></td>
+                        <td><label for="Action">Action</label><input id="Action" name="Action" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Spade">Spade</label><input id="Spade" name="Spade" type="text"></td>
+                        <td><label for="CardId">Card ID</label><input id="CardId" name="CardId" type="text" readonly></td>
+                        <td><label for="gameLevel">Game Level</label><input id="gameLevel" name="gameLevel" type="text" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label>&nbsp;</label><button>Submit</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </section>
+    </div>
+    <div class="column sideColumn">
+        <h1>Help</h1>
+        <section class="sideSection">
+            <a href="">Rules for Original Version</a>
+        </section>
+        <section class="sideSection">
+            <a href="">Rules for Kids Version</a>
+        </section>
+    </div>
+</div>
+
+</body>
+</html>

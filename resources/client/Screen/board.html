@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/client/js/screen.js"></script>
+    <meta charset="UTF-8">
+    <title>Game Board</title>
+    <link rel = "stylesheet" href="/client/css/screen.css">
+</head>
+
+
+<body onpageshow="pageLoad()">
+<div id="topnav" class="topnav">
+    <div class="logo">
+        <img src="/client/img/expressLogo.jpg" alt="Express Logo">
+    </div>
+    <a id="topnavHome" href="/client/Screen/home.html">Home</a>
+    <a class="active" id="topnavGame" href="/client/Screen/board.html?gameLevel=original">Game</a>
+    <a id="topnavAdmin"  href="/client/Admin/admin.html">Admin</a>
+    <a id="topnavHelp"  href="/client/Screen/help.html">Help</a>
+</div>
+
+<div class="xRow">
+    <div class="column mainColumn" >
+        <div class="row">
+            <div class="col fCol sqrFinish" id="sqr56">
+
+            </div>
+            <div class="col colRandom" id="sqr55">
+
+            </div>
+            <div class="col colSpade" id="sqr54">
+
+            </div>
+            <div class="col colAction" id="sqr53">
+
+            </div>
+            <div class="col colPerson" id="sqr52">
+
+            </div>
+            <div class="col colNature" id="sqr51">
+
+            </div>
+            <div class="col colObject" id="sqr50">
+
+            </div>
+            <div class="col sqrArrowLeft" >
+                <br>&#8624;
+            </div>
+        </div>
+        <div class="row">
+            <div class="col fCol sqrArrowRight" >
+                <br>&#8625;
+            </div>
+            <div class="col colObject" id="sqr43">
+
+            </div>
+            <div class="col colNature" id="sqr44">
+
+            </div>
+            <div class="col colPerson" id="sqr45">
+
+            </div>
+            <div class="col colAction" id="sqr46">
+
+            </div>
+            <div class="col colSpade" id="sqr47">
+
+            </div>
+            <div class="col colRandom" id="sqr48">
+
+            </div>
+            <div class="col colWorld" id="sqr49">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col fCol colWorld" id="sqr42">
+
+            </div>
+            <div class="col colRandom" id="sqr41">
+
+            </div>
+            <div class="col colSpade" id="sqr40">
+
+            </div>
+            <div class="col colAction" id="sqr39">
+
+            </div>
+            <div class="col colPerson" id="sqr38">
+
+            </div>
+            <div class="col colNature" id="sqr37">
+
+            </div>
+            <div class="col colObject" id="sqr36">
+
+            </div>
+            <div class="col sqrArrowLeft">
+                <br>&#8624;
+            </div>
+        </div>
+        <div class="row">
+            <div class="col fCol sqrArrowRight">
+                <br>&#8625;
+            </div>
+            <div class="col colObject" id="sqr29">
+
+            </div>
+            <div class="col colNature" id="sqr30">
+
+            </div>
+            <div class="col colPerson" id="sqr31">
+
+            </div>
+            <div class="col colAction" id="sqr32">
+
+            </div>
+            <div class="col colSpade" id="sqr33">
+
+            </div>
+            <div class="col colRandom" id="sqr34">
+
+            </div>
+            <div class="col colWorld" id="sqr35">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col fCol colWorld" id="sqr28">
+
+            </div>
+            <div class="col colRandom" id="sqr27">
+
+            </div>
+            <div class="col colSpade" id="sqr26">
+
+            </div>
+            <div class="col colAction" id="sqr25">
+
+            </div>
+            <div class="col colPerson" id="sqr24">
+
+            </div>
+            <div class="col colNature" id="sqr23">
+
+            </div>
+            <div class="col colObject" id="sqr22">
+
+            </div>
+            <div class="col sqrArrowLeft">
+                <br>&#8624;
+            </div>
+        </div>
+        <div class="row">
+            <div class="col fCol sqrArrowRight">
+                <br>&#8625;
+            </div>
+            <div class="col colObject" id="sqr15">
+
+            </div>
+            <div class="col colNature" id="sqr16">
+
+            </div>
+            <div class="col colPerson" id="sqr17">
+
+            </div>
+            <div class="col colAction" id="sqr18">
+
+            </div>
+            <div class="col colSpade" id="sqr19">
+
+            </div>
+            <div class="col colRandom" id="sqr20">
+
+            </div>
+            <div class="col colWorld" id="sqr21">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col fCol colWorld" id="sqr14">
+
+            </div>
+            <div class="col colRandom" id="sqr13">
+
+            </div>
+            <div class="col colSpade" id="sqr12">
+
+            </div>
+            <div class="col colAction" id="sqr11">
+
+            </div>
+            <div class="col colPerson" id="sqr10">
+
+            </div>
+            <div class="col colNature" id="sqr9">
+
+            </div>
+            <div class="col colObject" id="sqr8">
+
+            </div>
+            <div class="col sqrArrowLeft">
+                <br>&#8624;
+            </div>
+        </div>
+        <div class="row"> <!-- Bottom Row -->
+            <div class="col fCol sqrStart" id="sqr0">
+
+            </div>
+            <div class="col colObject" id="sqr1">
+
+            </div>
+            <div class="col colNature" id="sqr2">
+
+            </div>
+            <div class="col colPerson" id="sqr3">
+
+            </div>
+            <div class="col colAction" id="sqr4">
+
+            </div>
+            <div class="col colSpade" id="sqr5">
+
+            </div>
+            <div class="col colRandom" id="sqr6">
+
+            </div>
+            <div class="col colWorld" id="sqr7">
+
+            </div>
+        </div>
+    </div>
+    <div class="column sideColumn">
+        <div class="sideBox lBox">
+            <div class="spnTeamMarker">&#9822</div>
+            <div class="spnTeamName">Team 1:&nbsp;&nbsp;</div>
+            <div class="spnTeamScore" id="t1Score">0</div>
+        </div>
+        <div class="sideBox lBox">
+            <div class="spnTeamMarker">&#9820</div>
+            <div class="spnTeamName">Team 2:&nbsp;&nbsp;</div>
+            <div class="spnTeamScore" id="t2Score">0</div>
+        </div>
+        <div class="sideBox">
+            <div class="sideBoxLabel">Playing Now</div>
+            <div class="spnGameID" id="nextPlay">TEAM</div>
+        </div>
+        <div class="sideBox">
+            <div class="sideBoxLabel">Use the QR Code below to connect the Mobile Phone to this game</div>
+            <hr>
+            <div class="sideBoxLabel">Game ID</div>
+            <div class="spnGameID" id="gameID">ABCD-EFGH</div>
+            <hr>
+            <div class="spnGameID">
+                <img alt-text="QR Code for Scanning" id="qrcode" style="margin-left:18%">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="msgBox" class="messageBox">
+    Game has Completed!
+</div>
+
+</body>
+</html>

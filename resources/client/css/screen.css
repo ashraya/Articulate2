@@ -1,0 +1,335 @@
+:root {
+    --sqrWidth: 90px;
+    --bigSpace: 10px;
+    --smlSpace: calc(var(--bigSpace)/2);
+    --mainColWidth: calc(var(--sqrWidth)*8 + var(--smlSpace));
+    --sideColWidth: calc(var(--sqrWidth)*3 + var(--bigSpace)*4);
+    --bodyHeight: calc(var(--sqrWidth)*8 - var(--smlSpace));
+    --bodyWidth: calc(var(--mainColWidth) + var(--sideColWidth));
+    --fntSml: 0.7em;
+    --fntReg: calc(var(--fntSml)*1.5);
+    --fntBig: calc(var(--fntReg)*1.5);
+    --fntBgr: calc(var(--fntBig)*1.5);
+}
+
+body {
+
+    min-width: var(--bodyWidth);
+    max-width: var(--bodyWidth);
+    width: var(--bodyWidth);
+
+    min-height: var(--bodyHeight);
+    max-height: var(--bodyHeight);
+    height: var(--bodyHeight);
+
+    margin: auto;
+    margin-top: var(--bigSpace);
+    font-family: arial;
+    color: #2f2f2f;
+    overflow: hide;
+}
+
+* {
+    box-sizing:border-box;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: var(--fntReg);
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: #2f2f2f;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.topnav input[type=text] {
+    float: right;
+    padding: var(--smlSpace);
+    border: none;
+    margin-top: var(--bigSpace);
+    margin-right: 16px;
+    font-size: var(--fntReg);
+}
+
+.mainColumn {
+    width: var(--mainColWidth);
+    min-width: var(--mainColWidth);
+    max-width: var(--mainColWidth);
+    height: var(--bodyHeight);
+    min-height: var(--bodyHeight);
+    max-height: var(--bodyHeight);
+    overflow: none;
+
+    float: left;
+    border: var(--bigSpace) solid;
+    border-image-source: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+    border-image-slice: 1;
+    margin: 0;
+    padding: var(--bigSpace);
+}
+.sideColumn {
+    width: var(--sideColWidth);
+    min-width: var(--sideColWidth);
+    max-width: var(--sideColWidth);
+    height: var(--bodyHeight);
+    min-height: var(--bodyHeight);
+    max-height: var(--bodyHeight);
+    overflow: none;
+
+    float: left;
+    border-top: var(--bigSpace) solid;
+    border-bottom: var(--bigSpace) solid;
+    border-right: var(--bigSpace) solid;
+    border-image-source: linear-gradient(90deg, rgb(250,224,66), rgb(0,143,104));
+    border-image-slice: 1;
+    padding: var(--bigSpace);
+}
+
+.messageBox {
+    width: var(--mainColWidth);
+    display: none;
+    height: 100px;
+    float:left;
+    border: var(--bigSpace) solid;
+    border-image-source: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+    border-image-slice: 1;
+    margin: 0;
+    margin-top: -428px;
+    margin-left: 150px;
+    background: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.logo{
+    display: block;
+    float: left;
+}
+.logo img {
+    height: 44px;
+}
+
+section > a.primaryOption {
+    padding: var(--smlSpace);
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+a.primaryOption {
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-radius: var(--bigSpace);
+    background: linear-gradient(180deg, rgb(250,224,66), rgb(0,143,104));
+}
+
+a.primaryOption:hover {
+    color: black;
+}
+
+.row{
+    display: block;
+    padding: 0;
+}
+
+.col{
+    display: inline-table;
+    height: var(--sqrWidth);
+    min-height: var(--sqrWidth);
+    max-height: var(--sqrWidth);
+    width: var(--sqrWidth);
+    min-width: var(--sqrWidth);
+    max-width: var(--sqrWidth);
+    overflow: none;
+    border: var(--smlSpace) solid;
+    border-image: radial-gradient(rgb(0,143,104), rgb(250,224,66)) 1;
+    padding: var(--smlSpace);
+    font-size: var(--fntReg);
+    text-align: center;
+    margin-left: calc(-2*var(--smlSpace));
+    margin-top: calc(-1*var(--smlSpace));
+    padding-top: 12px;
+}
+
+.fCol {
+    margin-left: 1px;
+}
+
+.colNature{
+    background: #4CAF50;
+}
+.colNature:before{
+    content: "Nature";
+}
+.colPerson{
+    background: coral;
+}
+.colPerson:before{
+    content: "Person";
+}
+.colAction{
+    background: goldenrod;
+}
+.colAction:before{
+    content: "Action";
+}
+.colSpade{
+    background: darkorange;
+}
+.colSpade:before{
+    content: "Spade";
+}
+.colRandom{
+    background: darkred;
+    color: white;
+}
+.colRandom:before{
+    content: "Random";
+}
+.colWorld{
+    background: lightpink;
+}
+.colWorld:before{
+    content: "World";
+}
+.colObject{
+    background: mediumvioletred;
+    color: white;
+}
+.colObject:before{
+    content: "Object";
+}
+.sqrStart{
+    background: bisque;
+    color: black;
+}
+.sqrStart:before{
+    content: "Start";
+}
+.sqrFinish{
+    background: bisque;
+    color: black;
+}
+.sqrFinish:before{
+    content: "Finish";
+}
+.sqrArrowLeft, .sqrArrowRight{
+    background: white;
+    font-weight: bold;
+    color: black;
+}
+.sqrArrowLeft, .sqrArrowRight{
+    font-size: var(--fntReg);
+}
+
+.spnMarker {
+    display:inline;
+    width:15%;
+    font-size:2.1em;
+}
+
+.sideBox {
+    display: block;
+    margin-left:5%;
+    margin-right:5%;
+    width: 90%;
+    margin-top: 10px;
+    margin-botom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    background: linear-gradient(180deg, rgb(250,224,66), rgb(0,143,104));
+}
+
+.lBox, .cBox {
+    display:flex !important;
+}
+
+.spnTeamMarker {
+    display:inline;
+    width:25%;
+    font-size:3.2em;
+}
+
+.spnTeamName {
+    display:flex;
+    width: 55;
+    font-size: 1.6em;
+    padding-top: 22px;
+}
+
+.spnTeamScore {
+    display:flex;
+    width: 20%;
+    font-size: 1.6em;
+    padding-top:22px;
+}
+
+.sideBoxLabel {
+    display: block;
+    font-size: 0.7em;
+}
+
+.spnGameID {
+    display: block;
+    font-size: 2.0em;
+    padding-top: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.6em;
+}
+
+input[type="submit"] {
+    display:block;
+    margin-top: 10px;
+}
+
+.WordList {
+    width: 100%;
+    border-spacing: 2;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.WordList tbody, .WordList thead {
+    display: block;
+    width: 100%;
+}
+
+.WordList tbody td, .WordList thead th {
+    width: 6%;
+    border: 1px solid orange;
+    padding-left: var(--smlSpace);
+    padding-right: var(--smlSpace);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: left;
+    font-size: var(--bigSpace);
+    word-break: break-all;
+}
+.WordList button {
+    font-size: var(--fntReg);
+}
+.WordList tbody {
+    height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.WordList thead {
+    overflow-y: scroll;
+}
